@@ -11,11 +11,10 @@ from flask_gravatar import Gravatar
 from functools import wraps
 from flask import abort
 import os
-from dotenv import load_dotenv
 
-load_dotenv('C:/Users/Luis/Workspace/variables.env.txt')
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("UserKey")
+app.config['SECRET_KEY'] = "UserKey"
 ckeditor = CKEditor(app)
 Bootstrap(app)
 gravatar = Gravatar(app,
